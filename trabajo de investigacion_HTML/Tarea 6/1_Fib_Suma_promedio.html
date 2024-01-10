@@ -1,0 +1,19 @@
+<script>
+let n = 10;
+let fibonacci = [1, 1];
+let suma = 2;
+let i = 2;
+
+while (i < n) {
+    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    suma += fibonacci[i];
+    i++;
+}
+
+let promedio = suma / n;
+
+document.write("Fibonacci: ", fibonacci);
+document.write("<p>Suma: ", suma);
+document.write("<p>Promedio:", promedio);
+
+</script>

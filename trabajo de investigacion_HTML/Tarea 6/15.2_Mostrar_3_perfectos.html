@@ -1,0 +1,31 @@
+<script>
+
+function esPerfecto(numero) {
+    let sumaDivisores = 0;
+    let divisor = 1;
+
+    while (divisor < numero) {
+        if (numero % divisor === 0) {
+            sumaDivisores += divisor;
+        }
+        divisor++;
+    }
+
+    return sumaDivisores === numero;
+}
+
+let numPerfectosEncontrados = 0;
+let numeroPrimo = 2;
+
+while (numPerfectosEncontrados < 3) {
+    let candidatoPerfecto = Math.pow(2, numeroPrimo - 1) * (Math.pow(2, numeroPrimo) - 1);
+
+    if (esPerfecto(candidatoPerfecto)) {
+        document.write("<br>Número perfecto encontrado: ", candidatoPerfecto);
+        numPerfectosEncontrados++;
+    }
+
+    numeroPrimo++;
+}
+
+</script>

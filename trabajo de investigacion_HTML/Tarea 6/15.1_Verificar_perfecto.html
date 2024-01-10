@@ -1,0 +1,21 @@
+<script>
+let numero = parseInt(prompt("Ingrese un número:"));
+
+let sumaDivisores = 0;
+
+let divisor = 1;
+
+while (divisor < numero) {
+    if (numero % divisor === 0) {
+        sumaDivisores += divisor;
+    }
+    divisor++;
+}
+
+if (sumaDivisores === numero) {
+    document.write("El número ", numero, " es perfecto.");
+} else {
+    document.write("El número ", numero, " no es perfecto.");
+}
+
+</script>

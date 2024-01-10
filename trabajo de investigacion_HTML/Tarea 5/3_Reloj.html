@@ -1,0 +1,22 @@
+<script>
+    let horas=0, minutos=0, segundos=0
+    
+    horas=Number(prompt("Ingerese el valor de horas: "))
+    minutos=Number(prompt("Ingrese el valor de minutos: "))
+    segundos=Number(prompt("Ingrese el valor de segundos: "))
+
+    while(segundos < 59){
+        segundos++
+        document.write(horas + " : " + minutos + " : " + segundos + "<br>")
+    }
+    if(segundos = 59){
+        minutos++
+        segundos = 0
+        document.write(horas + " : " + minutos + " : " + segundos + "<br>")
+    }
+    if(minutos = 59){
+        horas++
+        minutos = 0
+        document.write(horas + " : " + minutos + " : " + segundos + "<br>")
+    }
+</script>

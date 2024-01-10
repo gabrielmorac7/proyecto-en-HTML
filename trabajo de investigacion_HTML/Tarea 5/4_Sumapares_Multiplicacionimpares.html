@@ -1,0 +1,18 @@
+<script>
+    let n=Number(prompt("Ingrese la cantidad de nuemros: "));
+    let sumaPares = 0;
+    let productoImpares = 1;
+    let c = 0;
+    
+    while(c < n){
+        let  numero = Number(prompt("Ingrese un numero: "))
+        if (numero % 2 == 0){
+            sumaPares = sumaPares + numero  
+        }else{
+            productoImpares = productoImpares * numero
+        }
+        c++
+    }
+    document.write("La suma de los numeros pares es: ",sumaPares + "<br>")
+    document.write("El producto de los impares es: ",productoImpares)
+</script>

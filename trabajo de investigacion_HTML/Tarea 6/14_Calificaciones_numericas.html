@@ -1,0 +1,27 @@
+<script>
+let nota;
+let isValid = false;
+
+while (!isValid) {
+    nota = parseInt(prompt("Ingrese calificación numérica"));
+
+    if (nota >= 1 && nota <= 20) {
+        isValid = true;
+    } else {
+        document.write("La nota ingresada no es válida. Intente nuevamente.");
+    }
+}
+
+if (nota === 19 || nota === 20) {
+    document.write("Calificación: SOBRESALIENTE");
+} else if (nota >= 16 && nota <= 18) {
+    document.write("Calificación: MUY BUENO");
+} else if (nota >= 13 && nota <= 15) {
+    document.write("Calificación: BUENO");
+} else if (nota >= 10 && nota <= 12) {
+    document.write("Calificación: REGULAR");
+} else if (nota >= 1 && nota <= 9) {
+    document.write("Calificación: DEFICIENTE");
+}
+
+</script>

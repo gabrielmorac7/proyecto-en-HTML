@@ -1,0 +1,43 @@
+<script>
+function esPrimo(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function numerosPrimosFibonacci() {
+    const fibonacci = [1, 1];
+    let i = 2;
+
+    while (i < 10) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+        i++;
+    }
+
+    let numerosPrimos = [];
+    let suma = 0;
+
+    i = 0;
+    while (i < 10) {
+        if (esPrimo(fibonacci[i])) {
+            numerosPrimos.push(fibonacci[i]);
+            suma += fibonacci[i];
+        }
+        i++;
+    }
+
+    const promedio = suma / numerosPrimos.length;
+
+    document.write("Serie Fibonacci:", fibonacci.join(", "));
+    document.write("<p>Numero primos imprimir:", numerosPrimos.join(", "));
+    document.write("<p>Suma:", suma);
+    document.write("<p>Promedio:", promedio);
+}
+
+
+numerosPrimosFibonacci();
+  </script>

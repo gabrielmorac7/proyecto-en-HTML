@@ -1,0 +1,16 @@
+<script>
+    let n=0, c=2;
+    n=Number(prompt("Ingrese cualquier valor: "))
+
+    while(n % c != 0 && n > 1){
+        c++
+    }
+
+    if(c ==n){
+        document.write(n, "Es primo")
+        document.log(n, "Es primo")
+    }else{
+        document.write(n, "No es primo")
+        document.log(n, "No es primo")
+    }
+</script>

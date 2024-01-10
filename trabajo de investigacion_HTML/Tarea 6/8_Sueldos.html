@@ -1,0 +1,23 @@
+<script>
+let nombreVendedor = prompt("Ingrese nombre del vendedor");
+let sueldoBasico = parseFloat(prompt("Ingrese sueldo básico"));
+let ventas = [];
+let totalVentas = 0;
+let i = 1;
+
+while (i <= 3) {
+    let venta = parseFloat(prompt(`Ingrese venta ${i}`));
+    ventas.push(venta);
+    totalVentas += venta;
+    i++;
+}
+
+let comision = totalVentas * 0.1;
+let sueldoTotal = sueldoBasico + comision;
+
+document.write("Nombre del vendedor: " + nombreVendedor + "<br>");
+document.write("Total de comisiones: " + comision + "<br>");
+document.write("Sueldo total a recibir: " + sueldoTotal + "<br>");
+
+</script>
+

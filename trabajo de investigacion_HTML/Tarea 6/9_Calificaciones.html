@@ -1,0 +1,20 @@
+<script>
+let nombreAlumno = prompt("Ingrese nombre del alumno");
+let notas = [];
+let sumaNotas = 0;
+let i = 1;
+
+while (i <= 3) {
+    let nota = parseFloat(prompt(`Ingrese nota ${i}`));
+    notas.push(nota);
+    sumaNotas += nota;
+    i++;
+}
+
+let promedioNotas = sumaNotas / 3;
+
+document.write("Nombre del alumno: " + nombreAlumno + "<br>");
+document.write("Suma de notas: " + sumaNotas + "<br>");
+document.write("Promedio de notas: " + promedioNotas + "<br>");
+
+</script>

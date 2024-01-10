@@ -1,0 +1,32 @@
+<script>
+let i = 1;
+let numeros = [];
+
+while (i <= 4) {
+    let num = parseFloat(prompt(`Ingrese número ${i}`));
+    numeros.push(num);
+    i++;
+}
+
+let mayor = numeros[0];
+let menor = numeros[0];
+
+let j = 1;
+while (j < numeros.length) {
+    if (numeros[j] > mayor) {
+        mayor = numeros[j];
+    }
+
+    if (numeros[j] < menor) {
+        menor = numeros[j];
+    }
+
+    j++;
+}
+
+document.write("El mayor es: ", mayor);
+document.write("<p>El menor es: ", menor);
+
+
+
+</script>

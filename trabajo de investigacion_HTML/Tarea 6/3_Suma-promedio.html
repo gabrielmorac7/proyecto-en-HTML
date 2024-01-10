@@ -1,0 +1,27 @@
+<script>
+function esPrimo(num) {
+    for (let i = 2; i < num; i++)
+        if (num % i === 0) return false;
+    return num !== 1;
+}
+
+let n = 10;
+let primos = [];
+let sumaPrimos = 0;
+let i = 2;
+
+while (primos.length < n) {
+    if (esPrimo(i)) {
+        primos.push(i);
+        sumaPrimos += i;
+    }
+    i++;
+}
+
+let promedioPrimos = sumaPrimos / n;
+
+document.write("Primos:", primos);
+document.write("<p>Suma:", sumaPrimos);
+document.write("<p>Promedio:", promedioPrimos);
+
+</script>

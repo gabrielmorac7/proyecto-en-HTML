@@ -1,0 +1,22 @@
+ <script>
+let n = 10;
+let fibonacci = [1, 1];
+let pares = 0;
+let impares = 0;
+let i = 2;
+
+while (i < n) {
+    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    if (fibonacci[i] % 2 === 0) {
+        pares++;
+    } else {
+        impares++;
+    }
+    i++;
+}
+
+document.write("Fibonacci:", fibonacci);
+document.write("<p>Pares:", pares);
+document.write("<p>Impares:", impares);
+
+</script>

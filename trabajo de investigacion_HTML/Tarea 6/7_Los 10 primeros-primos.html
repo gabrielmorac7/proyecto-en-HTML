@@ -1,0 +1,29 @@
+<script>
+function esPrimo(num) {
+    for (let i = 2; i < num; i++)
+        if (num % i === 0) return false;
+    return num !== 1;
+}
+
+let primerosPrimos = [];
+let entre1y10 = [];
+let entre15y25 = [];
+let i = 2;
+
+while (primerosPrimos.length < 10) {
+    if (esPrimo(i)) {
+        primerosPrimos.push(i);
+        if (i >= 1 && i <= 10) {
+            entre1y10.push(i);
+        } else if (i >= 15 && i <= 25) {
+            entre15y25.push(i);
+        }
+    }
+    i++;
+}
+
+document.write("Primeros primos: " + primerosPrimos.join(", ") + "<br>");
+document.write("Contar primos entre [1 - 10]: " + entre1y10.join(", ") + " => Cantidad " + entre1y10.length + "<br>");
+document.write("Contar primos entre [15 - 25]: " + entre15y25.join(", ") + " => Cantidad " + entre15y25.length + "<br>");
+
+</script>
